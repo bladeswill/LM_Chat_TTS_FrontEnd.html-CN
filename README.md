@@ -8,6 +8,7 @@ LM_Chat_TTS_FrontEnd 是一个简单但功能强大的界面，用于使用文�
 指引：
 --------
 - 下载独立的 HTML 文件 LM_Chat_TTS_FrontEnd.html（使用 HTML、JavaScript、CSS 创建）
+- LM_Chat_TTS_FrontEnd-CN.html 是从源文件 LM_Chat_TTS_FrontEnd.html 手动翻译网页文字，然后保存的
 - 打开 LM Studios 并加载您选择的 LM
 - 在 LM 工作室中测试模型，确保其正常运行，并获得您想要的设置。
 - 转到本地服务器选项卡
