@@ -1,72 +1,71 @@
 LM_Chat_TTS_FrontEnd.html
 ====================
 
-About:
-LM_Chat_TTS_FrontEnd is a simple yet powerful interface for interacting with LM Studio models using text-to-speech functionality. This project is designed to be lightweight and user-friendly, making it suitable for a wide range of users interested in exploring voice interactions with AI models.
+关于：LM_Chat_TTS_FrontEnd 是一个简单但功能强大的界面，用于使用文本转语音功能与 LM Studio 模型进行交互。该项目设计轻量且用户友好，适合有兴趣探索与 AI 模型进行语音交互的广大用户。
 
-LM_Chat_TTS_FrontEnd is a simple yet powerful interface for interacting with LM Studio models using text-to-speech functionality. This project is designed to be lightweight and user-friendly, making it suitable for a wide range of users interested in exploring voice interactions with AI models.
+LM_Chat_TTS_FrontEnd 是一个简单但功能强大的界面，用于使用文本转语音功能与 LM Studio 模型进行交互。该项目设计轻量且用户友好，适合有兴趣探索与 AI 模型进行语音交互的广大用户。
 
-Instructions:
+指引：
 --------
-- Download the stand alone HTML file LM_Chat_TTS_FrontEnd.html (created with HTML, JavaScript, CSS)
-- Open LM Studios and load your LM of choice
-- Test out the model within LM studios to ensure it is working nativly, get the settings you want.
-- Go to the Local Server Tab
-- Choose the Preset from LM Studios that goes with your model
-- Turn on Cross-Origin-Resource-Sharing (CORS)
-- Start Server
-- Open the HTML Document LM_Chat_TTS_FrontEnd.html in the Edge Browser (For best voice options)
-- Type in the System Promt, AI Name, Choose the AI voice, Your your name, and choose a voice for you (optional
-- Type your message and hit send
-- Select Erase memory if the AI is getting confused to reset memory
+- 下载独立的 HTML 文件 LM_Chat_TTS_FrontEnd.html（使用 HTML、JavaScript、CSS 创建）
+- 打开 LM Studios 并加载您选择的 LM
+- 在 LM 工作室中测试模型，确保其正常运行，并获得您想要的设置。
+- 转到本地服务器选项卡
+- 从 LM Studios 中选择适合您的模型的预设
+- 打开跨源资源共享 (CORS)
+-  启动服务器
+- 在边缘浏览器中打开 HTML 文档 LM_Chat_TTS_FrontEnd.html（以获得最佳语音选项）
+- 输入系统提示、AI 名称、选择 AI 语音、您的名字，然后为您选择一个语音（可选）
+- 输入您的消息并点击发送
+- 如果 AI 无法重置内存，请选择擦除内存
 
-Features
+特性
 --------
-- Standalone HTML/JS/CSS File: The entire functionality is encapsulated in a single file for ease of use.
-- Voice Chat Capability: Engage in voice chats with LM Studio models.
-- Customizable Options: Users can set various parameters including AI's name, voice, voice speed, user's name, and voice speed.
-- Local Server Integration: Easily connect to a local server running LM Studio.
-- Browser Compatibility: Optimized for Edge browser for a wider range of voice options.
+- 独立的 HTML/JS/CSS 文件：整个功能都封装在一个单个文件中，方便使用。
+- 语音聊天能力：与 LM Studio 模型进行语音聊天。
+- 可定制选项：用户可以设置各种参数，包括 AI 的名称、声音、语音速度、用户的名 称和声音速度。
+- 本地服务器集成：轻松连接到运行 LM Studio 的本地服务器。
+- 浏览器兼容性：优化了对 Edge 浏览器的兼容性，以提供更广泛的声音选项。
 
-Installation and Setup
-----------------------
-1. Clone the Repository: Download the files from the GitHub repository.
-2. Start LM Studio Local Server: Ensure LM Studio is running locally on your machine.
-3. Open the HTML File: Use a web browser, preferably Edge, to open the HTML file.
+安装和设置
+----------------
+1. 克隆仓库：从 GitHub 仓库下载文件。
+2. 启动 LM Studio 本地服务器：确保 LM Studio 在您的本地机器上正常运行。
+3. 打开 HTML 文件：使用 web 浏览器（建议使用 Edge）打开 HTML 文件。
 
-Usage
+使用
 -----
-- Configure Settings: Upon opening the file, configure the settings in the menu, including AI and user voice options.
-- Enter System Prompts: Customize system prompts as needed for specific interactions.
-- Start Chatting: Type messages in the chat box and receive spoken responses from the AI model.
+- 配置设置：打开文件后，在菜单中配置设置，包括 AI 和用户的声音选项。
+- 输入系统提示：根据需要自定义系统提示。
+- 开始聊天：在聊天框中输入消息，并收到 AI 模型的语音回复。
 
-Configuration Options
----------------------
-- AI and User's Name: Personalize the names for a more customized experience.
-- Voice Selection: Choose from a range of voices for both AI and user.
-- Voice Speed Control: Adjust the speed of voice responses.
-- Custom Endpoint: Set up a custom endpoint URL for specific server interactions.
+配置选项
+----------------
+- AI 和用户的名 称：个性化名 称以获得更定制化的体验。
+- 声音选择：从 AI 和用户的一系列声音中进行选择。
+- 声音速度控制：调整语音回复的速度。
+- 自定义API端点：为特定服务器交互设置自定义API端点 URL。
 
-Additional Features
--------------------
-- Theme Toggle: Switch between light and dark themes for user comfort.
-- Conversation Log: View, evaluate, condense, or clear the conversation log for better data management.
-- Auto-Read Functionality: Enable or disable automatic reading of messages.
+附加功能
+----------------
+- 主题切换：在浅色和深色主题之间切换，以使用户感到舒适。
+- 对话日志：查看、评估、压缩或清空对话日志，以更好地管理数据。
+- 自动朗读功能：可启用或禁用自动朗读消息的功能。
 
-Troubleshooting
----------------
-- Check Browser Compatibility: Ensure you are using the Edge browser for full functionality.
-- Verify Local Server: Make sure the LM Studio local server is running correctly.
-- Review Console Logs: Use the browser's developer tools to check for any error messages.
+故障排除
+----------------
+- 检查浏览器兼容性：确保您使用的是 Edge 浏览器以享受全部功能。
+- 验证本地服务器：确保 LM Studio 本地服务器正常运行。
+- 查看控制台日志：使用浏览器的开发者工具查看是否有错误消息。
 
-Contributing
+贡献
 ------------
-Contributions to LM_Chat_TTS_FrontEnd are welcome. Please follow the standard fork-and-pull request workflow. Do not forget to update tests and documentation as necessary.
+欢迎为 LM_Chat_TTS_FrontEnd 项目做出贡献。请按照标准的分支和拉取请求工作流程进行操作。别忘了根据需要更新测试和文档。
 
-License
--------
-This project is released under [specify license], which allows for wide usage and contributions while maintaining the necessary legal protections.
+许可证
+----------------
+该项目发布在 [specify license]， 它允许广泛使用和贡献，同时保持必要的法律保护。
 
-Created by: Friend of AI
+创建者: Friend of AI
 https://www.youtube.com/@friendofai
 
