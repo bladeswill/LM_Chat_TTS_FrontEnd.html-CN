@@ -613,6 +613,16 @@ function viewLog() {
 
 function populateVoiceList() {
   const voices = synth.getVoices();
+
+  // Set default voice for LLM before populating the voice list
+  const defaultLLMVoice = 'Microsoft HsiaoChen Online (Natural) - Chinese (Taiwan)';
+  for (const voice of voices) {
+    if (voice.name === defaultLLMVoice) {
+      llmVoiceSelect.value = voice.voiceURI;
+      break;
+    }
+  }
+
   for (const voice of voices) {
     const option = document.createElement('option');
     option.textContent = `${voice.name} (${voice.lang})`;
@@ -621,14 +631,15 @@ function populateVoiceList() {
     llmVoiceSelect.appendChild(option.cloneNode(true));
   }
 
-  // Set default voice for LLM
-  const defaultLLMVoice = 'Microsoft HsiaoChen Online (Natural) - Chinese (Taiwan)';
-  for (const voice of voices) {
-    if (voice.name === defaultLLMVoice) {
-      llmVoiceSelect.value = voice.voiceURI;
-      break;
+  // Set default voice for LLM after populating the voice list with a delay of 1 second
+  setTimeout(() => {
+    for (const voice of voices) {
+      if (voice.name === defaultLLMVoice) {
+        llmVoiceSelect.value = voice.voiceURI;
+        break;
+      }
     }
-  }
+  }, 700);
 }
 
 if (synth.getVoices().length > 0) {
