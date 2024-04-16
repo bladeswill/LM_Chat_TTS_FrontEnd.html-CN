@@ -611,22 +611,33 @@ function viewLog() {
  let paused = false;
  let utterance;
 
- function populateVoiceList() {
-   const voices = synth.getVoices();
-   for (const voice of voices) {
-     const option = document.createElement('option');
-     option.textContent = `${voice.name} (${voice.lang})`;
-     option.value = voice.voiceURI;
-     userVoiceSelect.appendChild(option);
-     llmVoiceSelect.appendChild(option.cloneNode(true));
-   }
- }
+function populateVoiceList() {
+  const voices = synth.getVoices();
+  for (const voice of voices) {
+    const option = document.createElement('option');
+    option.textContent = `${voice.name} (${voice.lang})`;
+    option.value = voice.voiceURI;
+    userVoiceSelect.appendChild(option);
+    llmVoiceSelect.appendChild(option.cloneNode(true));
+  }
 
- if (synth.getVoices().length > 0) {
-   populateVoiceList();
- } else {
-   synth.onvoiceschanged = populateVoiceList;
- }
+  // Set default voice for LLM
+  const defaultLLMVoice = 'Microsoft HsiaoChen Online (Natural) - Chinese (Taiwan)';
+  for (const voice of voices) {
+    if (voice.name === defaultLLMVoice) {
+      llmVoiceSelect.value = voice.voiceURI;
+      break;
+    }
+  }
+}
+
+if (synth.getVoices().length > 0) {
+  populateVoiceList();
+} else {
+  synth.onvoiceschanged = populateVoiceList;
+}
+
+
 
 function speakText(message, voiceSelect, speedInput, readButton, isAutoPlayback = false) {
   if (synth.speaking) {
@@ -1056,35 +1067,27 @@ document.getElementById('ai-profile-picture-input').addEventListener('change', f
 
 function updateProfilePicture() {
     var storedPicture = localStorage.getItem('aiProfilePicture');
+    var defaultPicture = 'https://img.moegirl.org.cn/common/thumb/b/b8/BA_Pic_Arona-chibi.png/149px-BA_Pic_Arona-chibi.png';
+    var pictureToUse = storedPicture ? storedPicture : defaultPicture;
     var dragDropArea = document.getElementById('drag-drop-area');
-    
+
     dragDropArea.innerHTML = ''; // Clear the previous content
-    
-    if (storedPicture) {
-        var img = new Image();
-        img.onload = function() {
-            // Attach the click event listener once the image is fully loaded
-            img.addEventListener('click', function() {
-                document.getElementById('ai-profile-picture-input').click();
-            });
-        };
-        img.src = storedPicture;
-        img.alt = 'AI Profile Picture';
-        img.style = 'width: 100%; height: auto; border-radius: 50%; cursor: pointer;';
-        
-        dragDropArea.appendChild(img);
-    } else {
-        // Use default image if no picture is stored
-        var img = new Image();
-        img.src = 'https://img.moegirl.org.cn/common/thumb/b/b8/BA_Pic_Arona-chibi.png/149px-BA_Pic_Arona-chibi.png';
-        img.alt = 'AI Profile Picture';
-        img.style = 'width: 100%; height: auto; border-radius: 50%; cursor: pointer;';
+
+    var img = new Image();
+    img.onload = function() {
+        // Attach the click event listener once the image is fully loaded
         img.addEventListener('click', function() {
             document.getElementById('ai-profile-picture-input').click();
         });
-        dragDropArea.appendChild(img);
-    }
+    };
+    img.src = pictureToUse;
+    img.alt = 'AI Profile Picture';
+    img.style = 'width: 100%; height: auto; border-radius: 50%; cursor: pointer;';
+
+    dragDropArea.appendChild(img);
 }
+
+
 
 
 function setupDragAndDrop() {
